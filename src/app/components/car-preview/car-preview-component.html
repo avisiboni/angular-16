@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="card">
+  <div class="card_header">
+    <img [src]="preview.image" [alt]="preview.name" class="card_header_image"/>
+  </div>
+  <div class="card_body">
+    <section>
+      <div><strong> {{preview.name}}</strong></div>
+      <div>Year: {{preview.model}}</div>
+      <div>Miles: {{preview.miles}}</div>
+
+    </section>
+    <section>
+      <div>Price: {{preview.price}}</div>
+      <div>Sale Price: <b><s> {{carDiscount(preview.price)}}</s></b></div>
+      <div>
+        <button>I want it!</button>
+
+      </div>
+    </section>
+
+  </div>
+
+</div>
+{{blink()}}

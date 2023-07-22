@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="header_actions">
-    <input type="search">
-  </div>
+  <form class="header_actions" #form="ngForm">
+    <input type="search"  name="filterCriteria" (ngModelChange)="filterCars($event)" [ngModel]="filterCriteria" class="header_actions_search" placeholder="Search">
+  </form>
   <main class="main">
-
+    <car-preview *ngFor="let car of filterableCar" [preview]="car"/>
   </main>
 </div>

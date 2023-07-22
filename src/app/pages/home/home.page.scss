@@ -1,0 +1,23 @@
+.container {
+  padding: 30px;
+
+  .header_actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_search{
+      width: 50%;
+      height: 37px;
+      padding: 12px 20px;
+
+      border: 1px solid #157ec0;
+      border-radius: 30px;
+    }
+  }
+  .main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+  }
+}

@@ -1,0 +1,47 @@
+.card {
+  width: 359px;
+  height: 352px;
+  background-color: white;
+  margin-top:2vh ;
+  &_header{
+    display: flex;
+    justify-content: center;
+    &_image{
+      width:341px ;
+      height: 190px;
+      padding: 15px;
+    }
+  }
+  &_body{
+    padding: 15px;
+    display: flex;
+    gap: 3vw;
+    section:nth-child(2){
+      margin-top: 20px;
+    }
+    button{
+      width: 135px;
+      height: 33px;
+      border-radius: 26px;
+      border: solid #45a3da;
+      background-color: #45a3da;
+      font-size: 17px;
+      color: white;
+    }
+    s{
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+    }
+    s:after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-top: 2px solid #ec008c;
+      height: 56%;
+      width: 100%;
+      transform: skewY( 9deg);
+    }
+  }
+}
