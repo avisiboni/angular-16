@@ -1,40 +1,20 @@
-
-<app-header [journey]="journey()"/>
+<app-header [journey]="journey()" />
 <div class="container">
   <form class="header_actions"
         #form="ngForm">
     <span> Your Ride : {{journey()}} </span>
-    <input type="search"
-           name="filterCriteria"
-           (ngModelChange)="filterName.set($event)"
-           [ngModel]="filterName()"
-           class="header_actions_search"
-           placeholder="Search">
-    <select name="pickUp"
-            [ngModel]="pickup()"
-            (ngModelChange)="pickup.set($event)"
-            id="pickUp">
+    <input type="search" name="filterCriteria"(ngModelChange)="filterName.set($event)"
+           [ngModel]="filterName()"class="header_actions_search"  placeholder="Search">
+    <select name="pickUp"[ngModel]="pickup()"(ngModelChange)="pickup.set($event)" id="pickUp">
       <option *ngFor="let i of countries()">{{i}}</option>
 
     </select>
-    <select name="return"
-            [ngModel]="return()"
-            (ngModelChange)="return.set($event)"
-            id="return">
-      <option *ngFor="let i of countries()">{{i}}</option>
-
+    <select name="return"  [ngModel]="return()" (ngModelChange)="return.set($event)"id="return">
+       <option *ngFor="let i of countries()">{{i}}</option>
     </select>
   </form>
-  <div>
-    <!-- <button type="button"
-            (click)="startSale()">Start Sale</button> -->
-            <!-- <h3>Hurry!! the sale is ending in {{timeLeft() / 60 / 60}}</h3> -->
-  </div>
-  <main class="main">
-
-
+    <main class="main">
     <car-preview *ngFor="let car of cars()"
                  [preview]="car" />
   </main>
 </div>
-

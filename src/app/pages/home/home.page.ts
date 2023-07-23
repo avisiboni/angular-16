@@ -31,21 +31,15 @@ export class HomePage {
 
   criteria$ = combineLatest({
     name: this.filterCriteria$,
-    
-
-    //....any other data 
   }).pipe(
     debounceTime(350),
   );
-private  criteria = toSignal(this.criteria$, {
+  private criteria = toSignal(this.criteria$, {
     initialValue: {
       name: '',
-    
-    
     }
   });
 
-  // protected timeLeft = computed(() =>  1000 * 60 * 60 - this.criteria().timeLeft );
   constructor() {
     effect(() => {
       //log user journey selection 
@@ -65,15 +59,5 @@ private  criteria = toSignal(this.criteria$, {
     const c = this.criteria();
     this.cars.set(await this.carsService.list(c.name));
   }
-  filterCars(searchKey: string) {
-    const cars = this.cars();
-
-    // this.filterableCar = this.cars.filter(x=> x.name.includes(searchKey))
-  }
-  startSale() {
-
-  }
-
-
-
+  
 }

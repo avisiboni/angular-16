@@ -16,26 +16,16 @@ export class CarDetailsPage {
   protected readonly router = inject(Router);
   protected readonly carDetails = this.router!.getCurrentNavigation()!.extras.state as CarModel;
   private _counter$ = new BehaviorSubject<number>(60);
-  private _ = this._counter$.asObservable().pipe(takeUntilDestroyed(), tap(x=> console.log('rx counter', x))).subscribe();
+  private _ = this._counter$.asObservable().pipe(takeUntilDestroyed(), tap(x => console.log('rx counter', x))).subscribe();
 
   protected countdown = signal<number>(60);
   constructor() {
     setInterval(() => {
-       this.countdown.update((current) => current - 1); 
-       this._counter$.next(this._counter$.value - 1);
-       }, 1000)
+      this.countdown.update((current) => current - 1);
+      this._counter$.next(this._counter$.value - 1);
+    }, 1000)
     effect(() => {
       console.log('counter ', this.countdown());
-      
-
     })
   }
-
-
-
-
-
-
-
-
 }

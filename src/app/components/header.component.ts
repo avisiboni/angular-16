@@ -6,7 +6,6 @@ import {Component, ElementRef, Input, NgZone, OnChanges, inject} from "@angular/
       <header class="header">
       <i>Your journey: {{journey}}</i>    
       </header>
-      <!-- {{blink()}} -->
       `,
   styles:[`.header {background-color: #004b93; display: flex; justify-content: center; align-items: center; gap:15px; height: 70px;
     color: white; font-size: 2rem} `],
