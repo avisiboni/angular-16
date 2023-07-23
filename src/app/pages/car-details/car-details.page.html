@@ -1,1 +1,6 @@
-<p>car-details works! {{carId}}</p>
+<a [routerLink]="['/lobby']" >Return to lobby</a>
+<main>
+    <strong>Hurry!</strong>
+    <div>You choose: {{carDetails.name }}</div>
+    <strong>The deal is about to expire in: {{countdown()}} sec</strong>
+</main>

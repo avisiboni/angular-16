@@ -5,4 +5,5 @@ export interface CarModel {
   price: number;
   discount?: number;
   model:number;
+  id:number;
 }

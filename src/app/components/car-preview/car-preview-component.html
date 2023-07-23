@@ -10,10 +10,10 @@
 
     </section>
     <section>
-      <div>Price: {{preview.price}}</div>
-      <div>Sale Price: <b><s> {{carDiscount(preview.price)}}</s></b></div>
+      <div>Price: <b><s> {{preview.price}}</s></b> </div>
+      <div>Sale Price: {{carDiscount(preview.price)}}</div>
       <div>
-        <button>I want it!</button>
+        <button (click)="navigateToCar(preview.id)">I want it!</button>
 
       </div>
     </section>
